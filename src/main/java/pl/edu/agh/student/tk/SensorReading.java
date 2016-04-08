@@ -10,7 +10,6 @@ public class SensorReading {
     SensorReading(String sensorName, Date timestamp, float value) {
         this.sensorName = sensorName;
         this.timestamp = timestamp;
-
         this.value = value;
     }
 
