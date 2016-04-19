@@ -1,13 +1,31 @@
 package pl.edu.agh.student.tk;
 
 public class ReadingUpdate {
-    private float value;
+    private int timestamp;
+    private String value;
+    private String color;
 
-    public float getValue() {
+    public int getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(int timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public String getValue() {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }

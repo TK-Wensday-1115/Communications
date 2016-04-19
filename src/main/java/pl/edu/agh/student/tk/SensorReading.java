@@ -1,27 +1,33 @@
 package pl.edu.agh.student.tk;
 
-import java.util.Date;
+import java.time.Instant;
 
 public class SensorReading {
     private final String sensorName;
-    private final Date timestamp;
-    private final float value;
+    private final Instant timestamp;
+    private final String value;
+    private final String color;
 
-    SensorReading(String sensorName, Date timestamp, float value) {
+    SensorReading(String sensorName, Instant timestamp, String value, String color) {
         this.sensorName = sensorName;
         this.timestamp = timestamp;
         this.value = value;
+        this.color = color;
     }
 
     public String getSensorName() {
         return sensorName;
     }
 
-    public Date getTimestamp() {
+    public Instant getTimestamp() {
         return timestamp;
     }
 
-    public float getValue() {
+    public String getValue() {
         return value;
+    }
+
+    public String getColor() {
+        return color;
     }
 }
