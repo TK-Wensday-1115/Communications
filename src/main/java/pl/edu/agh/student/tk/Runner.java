@@ -1,10 +1,14 @@
 package pl.edu.agh.student.tk;
 
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class Runner {
     public static void main(String[] args) {
-        DateTimeFormatter dateFormatter = DateTimeFormatter.BASIC_ISO_DATE;
+        DateTimeFormatter dateFormatter = DateTimeFormatter
+                .ofLocalizedDateTime(FormatStyle.SHORT)
+                .withZone(ZoneId.systemDefault());
         CommunicationsServer.registerCallback(reading ->
                 System.out.format("[%s] %s: <%s> %s\n",
                         dateFormatter.format(reading.getTimestamp()), reading.getSensorName(),
