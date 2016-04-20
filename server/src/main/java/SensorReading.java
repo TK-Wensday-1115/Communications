@@ -1,5 +1,3 @@
-package pl.edu.agh.student.tk;
-
 import java.time.Instant;
 
 public class SensorReading {

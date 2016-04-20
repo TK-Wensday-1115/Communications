@@ -1,5 +1,3 @@
-package pl.edu.agh.student.tk;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;

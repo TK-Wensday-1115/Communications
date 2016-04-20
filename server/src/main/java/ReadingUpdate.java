@@ -1,5 +1,3 @@
-package pl.edu.agh.student.tk;
-
 public class ReadingUpdate {
     private int timestamp;
     private String value;

@@ -1,5 +1,3 @@
-package pl.edu.agh.student.tk;
-
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
