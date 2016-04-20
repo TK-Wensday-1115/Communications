@@ -1,4 +1,4 @@
-public class ReadingUpdate {
+class ReadingUpdate {
     private int timestamp;
     private String value;
     private String color;

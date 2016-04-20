@@ -12,7 +12,7 @@ public class CommunicationsServer {
 
     private static HttpServer server;
     private static URI uri;
-    private static Collection<SensorReadingCallback> callbacks = new HashSet<>();
+    private static final Collection<SensorReadingCallback> callbacks = new HashSet<>();
 
     private CommunicationsServer() {
         throw new InstantiationError("Don't!");
@@ -31,7 +31,7 @@ public class CommunicationsServer {
         return uri;
     }
 
-    public static void broadcastUpdate(String sensorName, ReadingUpdate update) {
+    static void broadcastUpdate(String sensorName, ReadingUpdate update) {
         SensorReading reading = new SensorReading(
                 sensorName, Instant.ofEpochSecond(update.getTimestamp()), update.getValue(), update.getColor());
         for (SensorReadingCallback callback : callbacks) {
