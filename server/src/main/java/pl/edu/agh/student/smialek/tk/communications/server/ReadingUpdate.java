@@ -1,15 +1,15 @@
 package pl.edu.agh.student.smialek.tk.communications.server;
 
-class ReadingUpdate {
-    private int timestamp;
+public class ReadingUpdate {
+    private long timestamp;
     private String value;
     private String color;
 
-    public int getTimestamp() {
+    public long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(int timestamp) {
+    public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
 

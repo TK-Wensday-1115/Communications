@@ -1,4 +1,4 @@
-package pl.edu.agh.student.smialek.tk.communications.serverdemo;
+package pl.edu.agh.student.smialek.tk.communications.server;
 
 import pl.edu.agh.student.smialek.tk.communications.server.CommunicationsServer;
 
@@ -6,7 +6,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
-public class Runner {
+public class ServerDemo {
     public static void main(String[] args) {
         DateTimeFormatter dateFormatter = DateTimeFormatter
                 .ofLocalizedDateTime(FormatStyle.SHORT)
