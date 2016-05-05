@@ -1,3 +1,7 @@
+package pl.edu.agh.student.smialek.tk.communications.serverdemo;
+
+import pl.edu.agh.student.smialek.tk.communications.server.CommunicationsServer;
+
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;

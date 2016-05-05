@@ -1,3 +1,5 @@
+package pl.edu.agh.student.smialek.tk.communications.server;
+
 import java.time.Instant;
 
 public class SensorReading {

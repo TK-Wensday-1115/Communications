@@ -1,3 +1,5 @@
+package pl.edu.agh.student.smialek.tk.communications.server;
+
 class ReadingUpdate {
     private int timestamp;
     private String value;
