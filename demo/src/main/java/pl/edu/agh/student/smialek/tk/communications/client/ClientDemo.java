@@ -26,7 +26,6 @@ public class ClientDemo {
         // Actual code - you probably need this
         CommunicationsClient client = new CommunicationsClient("localhost", 8080, getRandomWord());
         client.sendUpdate(getRandomWord(), getRandomWord());
-        client.stop();
     }
 
     private static void configureProxy(String[] args) {

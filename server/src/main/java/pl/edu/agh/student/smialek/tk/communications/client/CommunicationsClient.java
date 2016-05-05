@@ -63,12 +63,4 @@ public class CommunicationsClient {
     private boolean notSuccessful(HttpResponse response) {
         return response.getStatus() / 100 != 2;
     }
-
-    public void stop() {
-        try {
-            Unirest.shutdown();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
