@@ -14,7 +14,7 @@ public class CommunicationsServer {
 
     private static HttpServer server;
     private static URI uri;
-    private static final Collection<SensorReadingCallback> callbacks = new HashSet<>();
+    private static final Collection<SensorReadingCallback> callbacks = new HashSet<SensorReadingCallback>();
 
     private CommunicationsServer() {
         throw new InstantiationError("Don't!");
