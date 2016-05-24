@@ -1,3 +1,5 @@
+apply plugin: 'maven-publish'
+
 dependencies {
     compile 'javax.ws.rs:javax.ws.rs-api:2.0.1'
     compile 'org.glassfish.jersey.core:jersey-client:2.22.2'
@@ -5,4 +7,12 @@ dependencies {
     compile 'org.glassfish.jersey.media:jersey-media-moxy:2.22.2'
     compile 'com.mashape.unirest:unirest-java:1.4.9'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.4'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
 }
