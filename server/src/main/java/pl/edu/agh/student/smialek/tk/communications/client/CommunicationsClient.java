@@ -8,7 +8,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import pl.edu.agh.student.smialek.tk.communications.server.ReadingUpdate;
 
 import java.io.IOException;
-import java.time.Instant;
+import java.util.Date;
 
 public class CommunicationsClient {
     private final String url;
@@ -43,7 +43,7 @@ public class CommunicationsClient {
     public void sendUpdate(String value, String color) {
         try {
             ReadingUpdate readingUpdate = new ReadingUpdate();
-            readingUpdate.setTimestamp(Instant.now().getEpochSecond());
+            readingUpdate.setTimestamp(new Date().getTime());
             readingUpdate.setValue(value);
             readingUpdate.setColor(color);
 

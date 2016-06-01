@@ -1,14 +1,14 @@
 package pl.edu.agh.student.smialek.tk.communications.server;
 
-import java.time.Instant;
+import java.util.Date;
 
 public class SensorReading {
     private final String sensorName;
-    private final Instant timestamp;
+    private final Date timestamp;
     private final String value;
     private final String color;
 
-    SensorReading(String sensorName, Instant timestamp, String value, String color) {
+    SensorReading(String sensorName, Date timestamp, String value, String color) {
         this.sensorName = sensorName;
         this.timestamp = timestamp;
         this.value = value;
@@ -19,7 +19,7 @@ public class SensorReading {
         return sensorName;
     }
 
-    public Instant getTimestamp() {
+    public Date getTimestamp() {
         return timestamp;
     }
 

@@ -13,7 +13,7 @@ public class ServerDemo {
             @Override
             public void receive(SensorReading reading) {
                 System.out.format("[%s] %s: <%s> %s\n",
-                        dateFormatter.format(reading.getTimestamp()), reading.getSensorName(),
+                        dateFormatter.format(reading.getTimestamp().toInstant()), reading.getSensorName(),
                         reading.getColor(), reading.getValue()
                 );
             }

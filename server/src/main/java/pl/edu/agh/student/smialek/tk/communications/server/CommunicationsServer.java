@@ -6,8 +6,8 @@ import org.glassfish.jersey.server.ResourceConfig;
 
 import javax.ws.rs.core.UriBuilder;
 import java.net.URI;
-import java.time.Instant;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashSet;
 
 public class CommunicationsServer {
@@ -34,8 +34,7 @@ public class CommunicationsServer {
     }
 
     static void broadcastUpdate(String sensorName, ReadingUpdate update) {
-        SensorReading reading = new SensorReading(
-                sensorName, Instant.ofEpochSecond(update.getTimestamp()), update.getValue(), update.getColor());
+        SensorReading reading = new SensorReading(sensorName, new Date(update.getTimestamp()), update.getValue(), update.getColor());
         for (SensorReadingCallback callback : callbacks) {
             callback.receive(reading);
         }
